@@ -254,7 +254,7 @@ body {
 
     .card-items {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         margin: 0px auto 30px auto;
         padding: 10px;
         gap:10px;
@@ -263,7 +263,7 @@ body {
         .card-item {
             position: relative;
             display: flex;
-            width: 0.7fr;
+            width: 300px;
             flex-direction: column;
             border: 1px solid #f3f3f3;
             border-radius: 20px;
@@ -274,7 +274,7 @@ body {
         .card-item img {
             display: block;
             margin: 0 auto;
-            width: 300px;
+            width: 200px;
         }
         .card-item h4 {
             font-size: 18px;
