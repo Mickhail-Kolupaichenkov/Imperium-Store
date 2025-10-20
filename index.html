@@ -31,12 +31,17 @@
             </div> -->
 
         </div>
+
+        <div class="cart__bottom-block">
+            <span id="cart-total-price"></span>
+            <button id="buy-button">Оформить заказ</button>
+        </div>
     </div>
 </div>
 
 <div class="wrapper">
     <header class="header">
-        <div class="header__left-block">
+        <div id="logo-block" class="header__left-block">
             <div class="left-block__logo">⚔️</div>
             <div class="left-block__title">
                 <h2>Imperium Store</h2>
@@ -46,46 +51,67 @@
         <div class="header__right-block">
             <nav class="right-block__menu">
                 <ul>
-                    <!-- В шапке -->
-<li id="cart-button">
-    <a href="#">                 
-        🛡️               
-        <span>0 руб.</span> <!-- Добавь span для суммы -->
-    </a>
-</li>
-<li id="favorite-button">
-    <a href="#">      
-        ⭐
-        <span>Закладки</span> <!-- Добавь span для текста -->
-    </a>
-</li>
-                    <li id="profile-button">
-                        <a href="#">
-                            💀 
-                        Профиль</a>
+                    <li id="cart-button">
+                        <a href="#">                 
+                        🛡️               
+                        <span>0 руб.</span>
+                        </a>
+                    </li>
+                        <li id="favorite-button">
+                        <a href="#">      
+                        ⭐
+                        <span>Закладки</span> 
+                        </a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
-    <!-- <section class="slaider">
-        <div class="slaider__content">
-            <img src="images/slaid1.png" alt="Промо-акция на сайте">
-            <button class="slaider__content__button--prev">                   
-                <svg width="15px" height="15px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#000000" class="bi bi-arrow-left-circle-fill">
-                <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
-                </svg>
-            </button>
-            <button class="slaider__content__button--next">                         
-                <svg width="15px" height="15px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#000000" class="bi bi-arrow-right-circle-fill">
-                <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
-                </svg>                     
-            </button>
+
+<section class="slaider">
+    <div class="slaider__content">
+        <div class="slaider__images">
+            <img src="images/slaid1.png" alt="Промо-акция 1" class="slaider__image active">
+            <img src="images/slaid2.png" alt="Промо-акция 2" class="slaider__image">
+            <img src="images/slaid3.png" alt="Промо-акция 3" class="slaider__image">
         </div>
-    </section> -->
+
+        <button class="slaider__content__button--prev">                   
+            <svg width="15px" height="15px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#000000" class="bi bi-arrow-left-circle-fill">
+            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+            </svg>
+        </button>
+        <button class="slaider__content__button--next">                         
+            <svg width="15px" height="15px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#000000" class="bi bi-arrow-right-circle-fill">
+            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+            </svg>                     
+        </button>
+
+        <div class="slaider__dots">
+            <button class="slaider__dot active" data-slide="0"></button>
+            <button class="slaider__dot" data-slide="1"></button>
+            <button class="slaider__dot" data-slide="2"></button>
+        </div>
+    </div>
+</section>
+
     <main class="main">
         <div class="main__content">
-            <h1>Все товары</h1>
+            <div class="main__content__top-block">
+                <h1 id="main-title-text">Все товары</h1>
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" id="search-input" placeholder="Введите название товара">
+                            <button class="search-btn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.3-4.3"></path>
+                                </svg>
+                            </button>
+                    </div>
+                </div>
+            </div>
+            
             <div id="card-items" class="card-items">
                 <!-- <div class="card-item">
                     <img src="images/item1.png" alt="">
