@@ -1,0 +1,43 @@
+@import url(main.css);
+
+:root {
+  /* Основные - темная готика */
+  --primary-bg: #0a0a0a;          /* Глубокий черный */
+  --secondary-bg: #1a1a1a;        /* Темный уголь */
+  --card-bg: #2a2a2a;             /* Карточки */
+  
+  /* Акцентные - Имперская палитра */
+  --imperial-red: #8B0000;        /* Кроваво-красный */
+  --gold-accent: #D4AF37;         /* Золото Империума */
+  --mechanicum-gray: #404040;     /* Техно-серый */
+  
+  /* Текст */
+  --text-primary: #ffffff;        /* Белый основной */
+  --text-secondary: #b0b0b0;      /* Серый второстепенный */
+  --text-muted: #666666;          /* Тусклый текст */
+  
+  /* Статусы */
+  --success: #00ff00;             
+  --danger: #ff3333;              
+  --warning: #ffaa00;             
+}
+
+/* Готические заголовки */
+h1, h2, h3, .header-title {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Основной текст */
+body, p, .product-name, .price {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 400;
+}
+
+/* Техно-цифры */
+.counter, .points, .faction {
+  font-family: 'Orbitron', monospace;
+  font-weight: 500;
+}

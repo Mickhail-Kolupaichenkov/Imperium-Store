@@ -4,12 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imperium store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="resset.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+<div id="cart" class="cart">
+    <div class="cart__content">
+        <div class="cart-nav">
+            <h4>Корзина товаров</h4>
+            <button id="cart-close">❌</button>
+        </div>
+        
+        <div id="cart-empty" class="cart-empty">
+            Нет добавленных товаров!☹️
+        </div>
+
+        <div class="cart-items">
+            <!-- <div class="cart-item">
+                    <img src="images/item1.png" alt="">
+                    <div class="cart-item__price-block">
+                        <div><h5>Space Marines Bladeguard Veterans Warhammer 40000</h5></div>
+                        <div class="cart-item__price-block--bottom"><span>7 990руб.</span>
+                        <button>❌</button></div>
+                    </div>
+            </div> -->
+
+        </div>
+    </div>
+</div>
+
 <div class="wrapper">
     <header class="header">
         <div class="header__left-block">
-            <div class="left-block__logo"><img src="images/logo.png" alt="Логотип Imperium Store"></div>
+            <div class="left-block__logo">⚔️</div>
             <div class="left-block__title">
                 <h2>Imperium Store</h2>
                 <span>Лучший магазин во всем империуме</span>
@@ -18,43 +46,61 @@
         <div class="header__right-block">
             <nav class="right-block__menu">
                 <ul>
-                    <li>
+                    <li id="cart-button">
                         <a href="#">                 
-                            <svg width="800px" height="800px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#000000" class="bi bi-cart">
-                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                            </svg>               
+                            🛡️               
                         0 руб.</a>
                     </li>
-                    <li>
+                    <li id="favorite-button">
                         <a href="# ">      
-                            <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7 3C4.23858 3 2 5.21619 2 7.95C2 10.157 2.87466 15.3947 11.4875 20.6903C11.7994 20.8821 12.2006 20.8821 12.5125 20.6903C21.1253 15.3947 22 10.157 22 7.95C22 5.21619 19.7614 3 17 3C14.2386 3 12 6 12 6C12 6 9.76142 3 7 3Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                            ⭐
                         Закладки</a>
                     </li>
-                    <li>
+                    <li id="profile-button">
                         <a href="#">
-                            <svg fill="#000000" width="800px" height="800px" viewBox="0 0 30.586 30.586" xmlns="http://www.w3.org/2000/svg">
-                            <g transform="translate(-546.269 -195.397)">
-                            <path d="M572.138,221.245a15.738,15.738,0,0,0-21.065-.253l-1.322-1.5a17.738,17.738,0,0,1,23.741.28Z"/>
-                            <path d="M561.464,204.152a4.96,4.96,0,1,1-4.96,4.96,4.966,4.966,0,0,1,4.96-4.96m0-2a6.96,6.96,0,1,0,6.96,6.96,6.96,6.96,0,0,0-6.96-6.96Z"/>
-                            <path d="M561.562,197.4a13.293,13.293,0,1,1-13.293,13.293A13.308,13.308,0,0,1,561.562,197.4m0-2a15.293,15.293,0,1,0,15.293,15.293A15.293,15.293,0,0,0,561.562,195.4Z"/>
-                            </g>
-                            </svg>  
-                        Покупки</a>
+                            💀 
+                        Профиль</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
-    <section class="slaider">
+    <!-- <section class="slaider">
         <div class="slaider__content">
             <img src="images/slaid1.png" alt="Промо-акция на сайте">
-            <button> < </button>
-            <button> > </button>
+            <button class="slaider__content__button--prev">                   
+                <svg width="15px" height="15px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#000000" class="bi bi-arrow-left-circle-fill">
+                <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                </svg>
+            </button>
+            <button class="slaider__content__button--next">                         
+                <svg width="15px" height="15px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#000000" class="bi bi-arrow-right-circle-fill">
+                <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                </svg>                     
+            </button>
         </div>
-    </section>
+    </section> -->
+    <main class="main">
+        <div class="main__content">
+            <h1>Все товары</h1>
+            <div id="card-items" class="card-items">
+                <!-- <div class="card-item">
+                    <img src="images/item1.png" alt="">
+                    <h4>Space Marines Bladeguard Veterans Warhammer 40000</h4>
+                    <div class="card-item__price-block">
+                        <span>Цена: 7 990руб.</span>
+                        <button>➕</button>
+                    </div>
+                    <button class="card-item__button-favorite">🖤</button>
+                </div> -->
+
+            </div>
+            
+        </div>
+    </main>
 
 </div>
+
+<script type="module" src="index.js"></script>
 </body>
 </html>
