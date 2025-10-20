@@ -1,4 +1,8 @@
 @import url(main.css);
+@import url(header.css);
+@import url(main.css);
+@import url(cart.css);
+@import url(slaider.css);
 
 :root {
   /* Основные - темная готика */
@@ -20,6 +24,11 @@
   --success: #00ff00;             
   --danger: #ff3333;              
   --warning: #ffaa00;             
+}
+
+body {
+    color: var(--imperial-red);
+    background-color: var(--primary-bg);
 }
 
 /* Готические заголовки */
