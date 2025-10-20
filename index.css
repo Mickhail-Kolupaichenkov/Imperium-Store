@@ -3,6 +3,7 @@
 @import url(main.css);
 @import url(cart.css);
 @import url(slaider.css);
+@import url(footer.css);
 
 :root {
   /* Основные - темная готика */
@@ -28,7 +29,13 @@
 
 body {
     color: var(--imperial-red);
-    background-color: var(--primary-bg);
+    background-color: #0a0a0a;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(139, 0, 0, 0.4), transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.3), transparent 40%);
+    background-attachment: fixed;
+    margin: 0;
+    min-height: 100vh;
 }
 
 /* Готические заголовки */
